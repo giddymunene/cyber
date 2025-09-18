@@ -13,7 +13,7 @@ function App() {
     <Router>
       <div className="app">
         <nav className="navbar">
-          <h2>Cyber Café</h2>
+          <h2>Dantech Cyber</h2>
           <ul>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/services">Services</Link></li>

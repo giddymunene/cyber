@@ -18,6 +18,18 @@ function Admin() {
       .catch((err) => console.error("Error fetching messages:", err));
   }, [navigate]);
 
+  const handleDelete = async (id) => {
+    try {
+      await fetch(`http://localhost:5000/api/admin/messages/${id}`, {
+        method: "DELETE",
+      });
+      // update UI after deletion
+      setMessages(messages.filter((msg) => msg.id !== id));
+    } catch (err) {
+      console.error("Error deleting message:", err);
+    }
+  };
+
   return (
     <div className="page">
       <h1>Admin Dashboard</h1>
@@ -41,6 +53,7 @@ function Admin() {
               <th>Name</th>
               <th>Email</th>
               <th>Message</th>
+              <th>Action</th>
             </tr>
           </thead>
           <tbody>
@@ -50,6 +63,11 @@ function Admin() {
                 <td>{msg.name}</td>
                 <td>{msg.email}</td>
                 <td>{msg.message}</td>
+                <td>
+                  <button onClick={() => handleDelete(msg.id)}>
+                    Delete
+                  </button>
+                </td>
               </tr>
             ))}
           </tbody>
