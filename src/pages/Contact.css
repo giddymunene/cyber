@@ -1,0 +1,184 @@
+.contact-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0d0d0d, #001f1f);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+  }
+  
+  .contact-container {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    padding: 50px;
+    max-width: 600px;
+    width: 100%;
+    box-shadow: 0 0 40px rgba(0, 255, 150, 0.3), inset 0 0 20px rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    color: white;
+    text-align: center;
+    transform: translateY(0);
+    transition: transform 0.5s ease;
+  }
+  
+  .contact-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 50px rgba(0, 255, 150, 0.5);
+  }
+  
+  .contact-container h1 {
+    font-size: 2.5rem;
+    color: #00ff99;
+    text-shadow: 0 0 20px rgba(0, 255, 150, 0.6);
+  }
+  
+  .contact-container h1 span {
+    color: white;
+  }
+  
+  .contact-desc {
+    font-size: 1.1rem;
+    color: #ddd;
+    margin-bottom: 25px;
+    line-height: 1.6;
+  }
+  
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+    font-size: 1rem;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    box-shadow: 0 0 15px rgba(0, 255, 150, 0.7);
+  }
+  
+  .contact-form textarea {
+    height: 150px;
+    resize: none;
+  }
+  
+  .contact-form button {
+    background: linear-gradient(135deg, #00ff99, #00b386);
+    color: white;
+    font-size: 1.1rem;
+    padding: 12px;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(0, 255, 150, 0.4);
+    transition: all 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    transform: scale(1.05);
+    background: linear-gradient(135deg, #00ffcc, #00ff99);
+    box-shadow: 0 0 25px rgba(0, 255, 150, 0.8);
+  }
+  
+  .status-message {
+    margin-top: 20px;
+    font-weight: 500;
+    color: #00ff99;
+    text-shadow: 0 0 10px rgba(0, 255, 150, 0.6);
+  }
+  
+  /* Responsive */
+  @media (max-width: 600px) {
+    .contact-container {
+      padding: 30px 20px;
+    }
+  
+    .contact-container h1 {
+      font-size: 2rem;
+    }
+  }
+  
+  /* --- Contact Info Cards --- */
+.contact-cards {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+    justify-items: center;
+  }
+  
+  .contact-card {
+    background: rgba(255, 255, 255, 0.08);
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    color: #fff;
+    width: 100%;
+    max-width: 250px;
+    box-shadow: 0 0 20px rgba(0, 255, 150, 0.25),
+                inset 0 0 10px rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(8px);
+    transition: all 0.4s ease;
+    transform: translateY(0);
+  }
+  
+  .contact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 35px rgba(0, 255, 150, 0.5);
+  }
+  
+  .contact-card h3 {
+    font-size: 1.2rem;
+    color: #00ff99;
+    margin: 10px 0;
+    text-shadow: 0 0 10px rgba(0, 255, 150, 0.6);
+  }
+  
+  .contact-card a {
+    color: #ccc;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+  }
+  
+  .contact-card a:hover {
+    color: #00ffcc;
+  }
+  
+  .contact-icon {
+    font-size: 2rem;
+    color: #00ff99;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 0 10px rgba(0, 255, 150, 0.6));
+    animation: glowPulse 2s infinite;
+  }
+  
+  @keyframes glowPulse {
+    0% {
+      filter: drop-shadow(0 0 5px rgba(0, 255, 150, 0.3));
+    }
+    50% {
+      filter: drop-shadow(0 0 20px rgba(0, 255, 150, 0.9));
+    }
+    100% {
+      filter: drop-shadow(0 0 5px rgba(0, 255, 150, 0.3));
+    }
+  }
+  
+  /* --- Responsive --- */
+  @media (max-width: 768px) {
+    .contact-card {
+      max-width: 100%;
+    }
+  }
+  

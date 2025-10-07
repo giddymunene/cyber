@@ -1,0 +1,124 @@
+.footer {
+    background: linear-gradient(145deg, #0d1117, #161b22);
+    color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.4);
+    border-top: 2px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .footer-inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 40px;
+    max-width: 1200px;
+    margin: auto;
+    text-align: left;
+  }
+  
+  .footer-section {
+    flex: 1;
+    min-width: 250px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.4),
+                -8px -8px 20px rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+  }
+  
+  .footer-section:hover {
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 0 30px rgba(0, 255, 150, 0.3);
+  }
+  
+  .footer-section h3 {
+    border-bottom: 2px solid rgba(0, 255, 150, 0.4);
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    color: #00ff99;
+    text-shadow: 0 0 10px rgba(0, 255, 150, 0.5);
+  }
+  
+  .footer-section p,
+  .footer-section a {
+    font-size: 0.95rem;
+    color: #ddd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .footer-section a:hover {
+    color: #00ff99;
+  }
+  
+  /* --- NAV LINKS --- */
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+  }
+  
+  .footer-nav a {
+    font-size: 1rem;
+    color: #bbb;
+    transition: transform 0.3s, color 0.3s;
+  }
+  
+  .footer-nav a:hover {
+    color: #00ff99;
+    transform: translateX(5px);
+  }
+  
+  /* --- SOCIALS --- */
+  .footer-socials {
+    display: flex;
+    gap: 15px;
+    margin-top: 10px;
+  }
+  
+  .social-icon {
+    font-size: 1.8rem;
+    color: #ccc;
+    transition: transform 0.3s, color 0.3s, text-shadow 0.3s;
+  }
+  
+  .social-icon:hover {
+    transform: scale(1.3);
+    color: #00ff99;
+    text-shadow: 0 0 15px #00ff99;
+  }
+  
+  /* --- COPYRIGHT --- */
+  .footer-copy {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+  }
+  
+  .footer-copy span {
+    color: #00ff99;
+    text-shadow: 0 0 8px rgba(0, 255, 150, 0.6);
+  }
+  
+  /* --- RESPONSIVE --- */
+  @media (max-width: 768px) {
+    .footer-inner {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .footer-section {
+      width: 100%;
+      text-align: center;
+    }
+  
+    .footer-nav {
+      align-items: center;
+    }
+  }
+  

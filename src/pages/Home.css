@@ -1,0 +1,174 @@
+/* === Hero Section === */
+.home-container {
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    transition: background-image 1s ease-in-out;
+  }
+  
+  .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .home-content {
+    text-align: center;
+    color: white;
+    max-width: 800px;
+    padding: 20px;
+  }
+  
+  .home-content h1 {
+    font-size: 2.5rem;
+    color: #00ff9d;
+    text-shadow: 0 0 15px rgba(0, 255, 150, 0.6);
+  }
+  
+  .home-content span {
+    color: white;
+  }
+  
+  .explore-btn {
+    margin-top: 20px;
+    padding: 12px 28px;
+    font-size: 1rem;
+    color: #0b0b15;
+    background: #00ff9d;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 600;
+  }
+  
+  .explore-btn:hover {
+    background: white;
+    color: #0b0b15;
+    transform: scale(1.05);
+  }
+  
+  /* === About Section === */
+  .about-section {
+    text-align: center;
+    padding: 60px 20px;
+    background: #111122;
+    color: #ddd;
+  }
+  
+  .about-section h2 {
+    color: #00ff9d;
+    margin-bottom: 15px;
+  }
+  
+  /* === Services Overview === */
+  .service-highlights {
+    padding: 60px 20px;
+    text-align: center;
+    background: #0b0b15;
+  }
+  
+  .service-highlights h2 {
+    color: #00ff9d;
+    margin-bottom: 30px;
+  }
+  
+  .service-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+  }
+  
+  .service-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 20px;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 10px rgba(0, 255, 150, 0.1);
+  }
+  
+  .service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(0, 255, 150, 0.4);
+  }
+  
+  .service-card img {
+    width: 100%;
+    border-radius: 12px;
+    height: 500px;
+    object-fit: cover;
+  }
+  
+  .service-card h3 {
+    color: #00ff9d;
+    margin-top: 10px;
+  }
+  
+  /* === Community Section === */
+  .community-section {
+    background: #111122;
+    text-align: center;
+    padding: 60px 20px;
+  }
+  
+  .community-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+  }
+  
+  .community-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    padding: 20px;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 10px rgba(0, 255, 150, 0.1);
+  }
+  
+  .community-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px rgba(0, 255, 150, 0.4);
+  }
+  
+  .community-card img {
+    width: 100%;
+    border-radius: 12px;
+    height: 500px;
+    object-fit: cover;
+  }
+  
+  .community-card h3 {
+    color: #00ff9d;
+    margin-top: 10px;
+  }
+  
+  /* === CTA Section === */
+  .cta-section {
+    text-align: center;
+    padding: 70px 20px;
+    background: linear-gradient(135deg, #00ff9d15, #00ff9d30);
+    color: white;
+  }
+  
+  .cta-btn {
+    margin-top: 20px;
+    padding: 14px 30px;
+    font-size: 1.1rem;
+    color: #0b0b15;
+    background: #00ff9d;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+  }
+  
+  .cta-btn:hover {
+    background: white;
+    transform: scale(1.05);
+  }
+  

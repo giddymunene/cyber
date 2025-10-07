@@ -5,10 +5,19 @@ function Admin() {
   const [messages, setMessages] = useState([]);
   const navigate = useNavigate();
 
+  // Allowed admin emails (only 3 registered admins)
+  const allowedAdmins = [
+    "admin1@example.com",
+    "admin2@example.com",
+    "admin3@example.com",
+  ];
+
   useEffect(() => {
     const token = localStorage.getItem("adminToken");
-    if (!token) {
-      navigate("/admin-login"); // redirect if not logged in
+    const adminEmail = localStorage.getItem("adminEmail"); // store this during login
+
+    if (!token || !allowedAdmins.includes(adminEmail)) {
+      navigate("/admin-login"); // redirect if not logged in or not allowed
       return;
     }
 
@@ -23,7 +32,6 @@ function Admin() {
       await fetch(`http://localhost:5000/api/admin/messages/${id}`, {
         method: "DELETE",
       });
-      // update UI after deletion
       setMessages(messages.filter((msg) => msg.id !== id));
     } catch (err) {
       console.error("Error deleting message:", err);
@@ -37,6 +45,7 @@ function Admin() {
         style={{ marginBottom: "20px" }}
         onClick={() => {
           localStorage.removeItem("adminToken");
+          localStorage.removeItem("adminEmail");
           navigate("/admin-login");
         }}
       >
@@ -64,9 +73,7 @@ function Admin() {
                 <td>{msg.email}</td>
                 <td>{msg.message}</td>
                 <td>
-                  <button onClick={() => handleDelete(msg.id)}>
-                    Delete
-                  </button>
+                  <button onClick={() => handleDelete(msg.id)}>Delete</button>
                 </td>
               </tr>
             ))}
